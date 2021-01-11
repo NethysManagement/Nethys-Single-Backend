@@ -1,0 +1,12 @@
+# Gradle project-specific cache directory
+/.gradle
+
+# Build output directories
+build
+bin
+
+# vscode settings directory
+/.vscode
+
+# Docker build file
+/Dockerfile
