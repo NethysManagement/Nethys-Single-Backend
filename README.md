@@ -23,3 +23,8 @@ Nethys can be thought of as a Pathfinder version of D&D Beyond (<https://www.dnd
 ## Trello
 
 Link: <https://trello.com/b/gHQs1UIL/nethys>
+
+## Roles
+
+- **UX Architect:** Michael Zide
+- **Logistics Architect:** Conner Steele
