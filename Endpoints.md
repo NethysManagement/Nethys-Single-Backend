@@ -13,18 +13,18 @@
 -DELETE: '/user/delete' 
   - Body contains the username of the account to be deleted (200).
 ## Character Controller
--GET: 'user/character/{id}' 
--GET: 'user/character' 
--POST: 'user/character/create
--UPDATE: 'user/character/{id}/update'
--DELETE: 'user/character/{id}/delete' 
+-GET: '/character/{id}' 
+-GET: '/character' 
+-POST: '/character/create
+-UPDATE: '/character/{id}/update'
+-DELETE: '/character/{id}/delete' 
 ## Class Controller
--GET: 'user/character/{id}/class'
--POST: 'user/character/{id}/set-class'
--UPDATE: 'user/character/{id}/update-class'
+-GET: '/character/{id}/class'
+-POST: '/character/{id}/set-class'
+-UPDATE: '/character/{id}/update-class'
 ## Spell Controller
--GET: 'user/character/{id}/all-spells'
--GET: 'user/character/{id}/prepared-spells'
--POST: 'user/character/{id}/prepared-spells'
--UPDATE: 'user/character/{id}/prepared-spells/modify'
--POST: 'user/character/{id}/prepared-spells/cast' -- ?
+-GET: '/character/{id}/all-spells'
+-GET: '/character/{id}/prepared-spells'
+-POST: '/character/{id}/prepared-spells'
+-UPDATE: '/character/{id}/prepared-spells'
+-POST: '/character/{id}/cast/{spell_id}'
