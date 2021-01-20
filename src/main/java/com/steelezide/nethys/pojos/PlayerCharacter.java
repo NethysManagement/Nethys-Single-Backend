@@ -29,7 +29,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Character {
+public class PlayerCharacter {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -62,8 +62,8 @@ public class Character {
 
     @ManyToOne
     @JoinColumn(name = "class")
-    private Class characterClass;
+    private PlayerClass playerClass;
 
     @Embedded
-    private AbilityScores abilityScores;
+    private AbilityScores abilityScores = new AbilityScores();
 }

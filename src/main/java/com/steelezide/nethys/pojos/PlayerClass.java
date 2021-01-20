@@ -30,7 +30,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Class {
+public class PlayerClass {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -49,7 +49,7 @@ public class Class {
     @Column(name = "learned")
     private boolean learned;
 
-    @ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.EAGER )
+    @ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.LAZY )
     @JoinTable(
         name = "class_to_spell",
         joinColumns = { @JoinColumn (name = "class_id") },
