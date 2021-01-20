@@ -22,6 +22,6 @@ public class Spellcaster extends Character {
     private List<Spell> knownSpells;
 
     @Embedded
-    private List<SlotRow> slots;
+    private Slots slots;
 
 }
