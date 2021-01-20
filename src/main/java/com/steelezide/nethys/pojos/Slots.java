@@ -2,79 +2,111 @@ package com.steelezide.nethys.pojos;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
+import javax.persistence.AssociationOverride;
+import javax.persistence.AssociationOverrides;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import javax.persistence.FetchType;
-import javax.persistence.JoinTable;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
-// TODO: Work out relation to spellcaster. Hibernate & Database.
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Embeddable
 public class Slots {
 
     @Column(name = "cantrip_total")
     private int cantripTotal;
 
-    @OneToMany
-    @JoinColumn(name = "cantrip_id", referencedColumnName = "slot_id")
+    @OneToMany(mappedBy = "owner")
+    @AssociationOverrides({
+        @AssociationOverride(name="owner", joinColumns = @JoinColumn(name = "cantrip_id"))
+    })
     private List<PreparedSpell> cantripPrepared;
 
     @Column(name = "first_total")
     private int firstTotal;
 
-    @Column(name = "first_prepared")
+    @OneToMany(mappedBy = "owner")
+    @AssociationOverrides({
+        @AssociationOverride(name="owner", joinColumns = @JoinColumn(name = "first_id"))
+    })
     private List<PreparedSpell> firstPrepared;
 
     @Column(name = "second_total")
     private int secondTotal;
 
-    @Column(name = "second_prepared")
+    @OneToMany(mappedBy = "owner")
+    @AssociationOverrides({
+        @AssociationOverride(name="owner", joinColumns = @JoinColumn(name = "second_id"))
+    })
     private List<PreparedSpell> secondPrepared;
 
     @Column(name = "third_total")
     private int thirdTotal;
 
-    @Column(name = "third_prepared")
+    @OneToMany(mappedBy = "owner")
+    @AssociationOverrides({
+        @AssociationOverride(name="owner", joinColumns = @JoinColumn(name = "third_id"))
+    })
     private List<PreparedSpell> thirdPrepared;
 
-    @Column(name = "forth_total")
-    private int forthTotal;
+    @Column(name = "fourth_total")
+    private int fourthTotal;
 
-    @Column(name = "forth_prepared")
-    private List<PreparedSpell> forthPrepared;
+    @OneToMany(mappedBy = "owner")
+    @AssociationOverrides({
+        @AssociationOverride(name="owner", joinColumns = @JoinColumn(name = "fourth_id"))
+    })
+    private List<PreparedSpell> fourthPrepared;
 
     @Column(name = "fifth_total")
     private int fifthTotal;
 
-    @Column(name = "fifth_prepared")
+    @OneToMany(mappedBy = "owner")
+    @AssociationOverrides({
+        @AssociationOverride(name="owner", joinColumns = @JoinColumn(name = "fifth_id"))
+    })
     private List<PreparedSpell> fifthPrepared;
 
     @Column(name = "sixth_total")
     private int sixthTotal;
 
-    @Column(name = "sixth_prepared")
+    @OneToMany(mappedBy = "owner")
+    @AssociationOverrides({
+        @AssociationOverride(name="owner", joinColumns = @JoinColumn(name = "sixth_id"))
+    })
     private List<PreparedSpell> sixthPrepared;
 
     @Column(name = "seventh_total")
     private int seventhTotal;
 
-    @Column(name = "seventh_prepared")
+    @OneToMany(mappedBy = "owner")
+    @AssociationOverrides({
+        @AssociationOverride(name="owner", joinColumns = @JoinColumn(name = "seventh_id"))
+    })
     private List<PreparedSpell> seventhPrepared;
 
     @Column(name = "eighth_total")
     private int eighthTotal;
 
-    @Column(name = "eighth_prepared")
+    @OneToMany(mappedBy = "owner")
+    @AssociationOverrides({
+        @AssociationOverride(name="owner", joinColumns = @JoinColumn(name = "eighth_id"))
+    })
     private List<PreparedSpell> eighthPrepared;
 
     @Column(name = "ninth_total")
     private int ninthTotal;
 
-    @Column(name = "ninth_prepared")
+    @OneToMany(mappedBy = "owner")
+    @AssociationOverrides({
+        @AssociationOverride(name="owner", joinColumns = @JoinColumn(name = "ninth_id"))
+    })
     private List<PreparedSpell> ninthPrepared;
 
 }
