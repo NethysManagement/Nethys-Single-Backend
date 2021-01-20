@@ -10,10 +10,19 @@ import javax.persistence.JoinTable;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 @Entity
-public class Spellcaster extends Character {
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString(callSuper = true)
+public class Spellcaster extends PlayerCharacter {
     
-    @ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.EAGER )
+    @ManyToMany(cascade = { CascadeType.ALL }, fetch = FetchType.LAZY )
     @JoinTable(
         name = "char_known_spell",
         joinColumns = { @JoinColumn (name = "char_id") },
@@ -22,6 +31,6 @@ public class Spellcaster extends Character {
     private List<Spell> knownSpells;
 
     @Embedded
-    private Slots slots;
+    private Slots slots = new Slots();
 
 }

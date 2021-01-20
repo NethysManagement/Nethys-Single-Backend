@@ -3,7 +3,14 @@ package com.steelezide.nethys.pojos;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Embeddable
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class AbilityScores {
     
     @Column(name = "strength")
