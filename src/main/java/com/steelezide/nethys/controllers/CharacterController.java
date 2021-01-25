@@ -7,7 +7,7 @@ import com.steelezide.nethys.services.CharacterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
-import Dtos.CharacterDto;
+import dtos.CharacterDto;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
