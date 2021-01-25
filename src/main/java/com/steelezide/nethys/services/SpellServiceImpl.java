@@ -1,5 +1,8 @@
 package com.steelezide.nethys.services;
 
-public class SpellServiceImpl {
+import org.springframework.stereotype.Service;
+
+@Service
+public class SpellServiceImpl implements SpellService {
     
 }

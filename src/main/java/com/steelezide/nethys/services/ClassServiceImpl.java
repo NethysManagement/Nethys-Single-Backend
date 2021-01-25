@@ -1,5 +1,8 @@
 package com.steelezide.nethys.services;
 
-public class ClassServiceImpl {
+import org.springframework.stereotype.Service;
+
+@Service
+public class ClassServiceImpl implements ClassService {
     
 }
