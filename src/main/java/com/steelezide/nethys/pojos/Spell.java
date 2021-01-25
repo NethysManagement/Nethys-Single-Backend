@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * An object that contains the data representing a Pathfinder 1st edition spell.
- * Has a no-args and all args contsructor. 
+ * Has a no-args and all args constructor. 
  */
 @Entity
 @Table(name = "spell")
@@ -44,7 +44,11 @@ public class Spell {
     
     /**
      * The school of magic this spell derives from. 
-     * Example: "Conjuration", "Divination", etc.
+     * <p> Examples: 
+     * <ul>
+     * <li>"Conjuration" </li>
+     * <li>"Divination", etc.</li>
+     * </ul>
      */
     @Column(name = "school")
     private String school;
@@ -58,28 +62,40 @@ public class Spell {
     
     /**
      * Represents the time it takes to cast a spell per the games mechanics.
-     * Example: "1 standard action", "1 round", etc.
+     * <p> Examples: 
+     * <ul>
+     * <li>"1 standard action"</li>
+     * <li>"1 round" etc.</li>
+     * </ul>
      */
     @Column(name = "cast_time")
     private String castTime;
     
     /**
      * Represents the components required to cast a spell per the games mechanics.
-     * Example: "V, S, M(diamond worth 10,000 gp), DF", "V, S, F", etc. 
+     * <p> Examples: 
+     * <ul>
+     * <li>"V, S, M(diamond worth 10,000 gp), DF" </li>
+     * <li>"V, S, F", etc.</li>
+     * </ul> 
      */
     @Column(name = "components")
     private String components;
     
     /**
      * Represent the range at which a spell can be cast.
-     * Example: "close (25 ft. + 5 ft./2 levels)", "touch", etc.
+     * <p> Examples: 
+     * <ul>
+     * <li>"close (25 ft. + 5 ft./2 levels)"</li>
+     * <li>"touch", etc.</li>
+     * </ul>
      */
     @Column(name = "range")
     private String range;
     
     /**
      * Represents the recipient(s) of this spell.
-     * Example: 
+     * <p> Examples: 
      * <ul>
      * <li>"one creature/level, no two of which can be more than 30 ft. apart" </li>
      * <li>"creature touched" </li> 
@@ -92,21 +108,36 @@ public class Spell {
     
     /**
      * Represent the area of effect for this spell.
-     * Example: "20-ft.-radius spread", "cone-shaped burst", etc.
+     * <p> Examples: 
+     * <ul>
+     * <li>"20-ft.-radius spread"</li>
+     * <li>"cone-shaped burst", etc.</li>
+     * </ul>
      */
     @Column(name = "area")
     private String area;
 
     /**
      * Represents the amount of time the spell last in game mechanics.
-     * Example: "instantaneous", "1 min./level", "concentration, up to 1 min./level (D)", "1 round/level", etc.
+     * <p> Examples: 
+     * <ul>
+     * <li>"instantaneous"</li>
+     * <li>"1 min./level"</li>
+     * <li>"concentration, up to 1 min./level (D)"</li>
+     * <li>"1 round/level", etc.</li>
+     * </ul>
      */
     @Column(name = "duration")
     private String duration;
     
     /**
      * Represents the saving throw for this spell.
-     * Example: "none", "Reflex half", "Will negates", etc.  
+     * <p> Examples: 
+     * <ul>
+     * <li>"none"</li>
+     * <li>"Reflex half"</li>
+     * <li>"Will negates", etc.</li>
+     * </ul>  
      */
     @Column(name = "saving_throw")
     private String savingThrow;

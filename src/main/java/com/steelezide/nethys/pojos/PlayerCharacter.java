@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * An object that contains the data representing a Pathfinder 1st edition character.
- * Has a no-args and all args contsructor. 
+ * Has a no-args and all args constructor. 
  */
 @Entity
 @Table(name = "character")
@@ -49,32 +49,37 @@ public class PlayerCharacter {
     private String username;
 
     /**
-     * The character's name which is restricted to alphanumberic characters.
+     * The character's name which is restricted to alphanumeric characters.
      */
     @Column(name = "name")
     private String name;
 
     /**
-     * Reperesents a character's total level from all classes.
+     * Represents a character's total level from all classes.
      */
     @Column(name = "level")
     private int level;
 
     /**
      * Two letter combinations representing the character's alignment.
-     * Example: Lawful Good = LG
+     * <p> Examples: 
+     * <ul>
+     * <li>Lawful Good: "LG"</li>
+     * <li>Chaotic Neutral: "CN"</li>
+     * <li>Neutral Evil: "NE", ect.</li>
+     * </ul>
      */
     @Column(name = "alignment")
     private String alignment;
 
     /**
-     * Represents the character's size modifier. <p>
-     * Example: <ul>
+     * Represents the character's size modifier. 
+     * <p>Examples: 
+     * <ul>
      * <li>Large = -1 </li> 
      * <li>Medium = +0 </li>
      * <li>Small = +1 </li>
      * </ul>
-     * </p>
      */
     @Column(name = "size")
     private int size;
