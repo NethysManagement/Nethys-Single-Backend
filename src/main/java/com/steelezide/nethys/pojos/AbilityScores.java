@@ -7,6 +7,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Contains fields that represent a character's ability scores.
+ */
 @Embeddable
 @Data
 @NoArgsConstructor

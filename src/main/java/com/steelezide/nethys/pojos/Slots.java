@@ -13,6 +13,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * A container object for a {@link Spellcaster}'s total spell slots as well as the spells that have 
+ * been assigned to those slots. 
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
