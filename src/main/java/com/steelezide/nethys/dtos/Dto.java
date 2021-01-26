@@ -1,5 +1,5 @@
 package com.steelezide.nethys.dtos;
 
-public interface Dto {
-    
+public interface Dto<T> {
+    public T toPojo();
 }
