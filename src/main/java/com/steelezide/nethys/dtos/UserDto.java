@@ -1,12 +1,14 @@
 package com.steelezide.nethys.dtos;
 
+import com.steelezide.nethys.pojos.User;
+
 /**
  * TODO: To be implemented with authorization and authentication
  */
-public class UserDto implements Dto {
+public class UserDto implements Dto<User> {
 
     @Override
-    public Object toPojo() {
+    public User toPojo() {
         // TODO Auto-generated method stub
         return null;
     }

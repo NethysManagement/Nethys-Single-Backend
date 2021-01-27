@@ -43,10 +43,11 @@ public class PlayerCharacter {
     private int id;
 
     /**
-     * Username of the player who created the character. 
+     * The player who created the character. 
      */
-    @Column(name = "user_name")
-    private String username;
+    @ManyToOne
+    @JoinColumn(name = "user_name")
+    private User user;
 
     /**
      * The character's name which is restricted to alphanumeric characters.

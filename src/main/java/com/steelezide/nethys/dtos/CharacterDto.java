@@ -2,6 +2,7 @@ package com.steelezide.nethys.dtos;
 
 import com.steelezide.nethys.pojos.AbilityScores;
 import com.steelezide.nethys.pojos.PlayerCharacter;
+import com.steelezide.nethys.pojos.User;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,12 +24,12 @@ public class CharacterDto implements Dto<PlayerCharacter> {
     private String username;
 
     /**
-     * The character's name which is restricted to alphanumberic characters.
+     * The character's name which is restricted to alphanumeric characters.
      */
     private String name;
 
     /**
-     * Reperesents a character's total level from all classes.
+     * Represents a character's total level from all classes.
      */
     private int level;
 
@@ -80,7 +81,7 @@ public class CharacterDto implements Dto<PlayerCharacter> {
     public CharacterDto (PlayerCharacter pc) {
         this();
         this.id = pc.getId();
-        this.username = pc.getUsername();
+        this.username = pc.getUser().getUsername();
         this.name = pc.getName();
         this.level = pc.getLevel();
         this.alignment = pc.getAlignment();
@@ -97,7 +98,7 @@ public class CharacterDto implements Dto<PlayerCharacter> {
 
         PlayerCharacter pc = new PlayerCharacter(
             this.getId(),
-            this.getUsername(),
+            new User(this.getUsername()),
             this.getName(),
             this.getLevel(),
             this.getAlignment(),

@@ -18,7 +18,7 @@ import lombok.ToString;
 
 /**
  * An object that contains the data representing a Pathfinder 1st edition character who is capable of casting casting spells. 
- * Has a no-args and all args contsructor.
+ * Has a no-args and all args constructor.
  * Extends {@link PlayerCharacter}
  */
 @Entity
@@ -30,7 +30,7 @@ import lombok.ToString;
 public class Spellcaster extends PlayerCharacter {
     
     /**
-     * A collection containing the spell that this character currrently knows.
+     * A collection containing the spell that this character currently knows.
      * Characters who do not learn spells inherently know all spells for their {@link PlayerClass}
      * given their level.
      */
