@@ -41,6 +41,4 @@ public class SpellController {
     public void createSpell(@RequestBody SpellDto spellDto){
         
     }
-
-    
 }
