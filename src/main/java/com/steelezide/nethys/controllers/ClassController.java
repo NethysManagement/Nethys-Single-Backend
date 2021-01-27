@@ -27,7 +27,7 @@ public class ClassController {
     }
 
     @GetMapping("{name}")
-    public Mono<PlayerClass> getClass(@PathVariable String name){
+    public Mono<PlayerClass> getPlayerClass(@PathVariable int id){
         return null;   
     }
 
@@ -37,7 +37,7 @@ public class ClassController {
     }
 
     @PostMapping
-    public void createClass(@RequestBody ClassDto classDto){
+    public void createPlayerClass(@RequestBody ClassDto classDto){
         
     }
 

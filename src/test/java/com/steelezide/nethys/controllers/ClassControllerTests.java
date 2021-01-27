@@ -29,13 +29,13 @@ public class ClassControllerTests {
     }
 
     @Test
-    public void testGetClass_OptimalInput() {
+    public void testGetPlayerClass_OptimalInput() {
         // @GetMapping("{name}") public Mono<PlayerClass> getClass(@PathVariable String name){}
         fail();
     }
 
     @Test
-    public void testGetClass_NameNotFound() {
+    public void testGetPlayerClass_NameNotFound() {
         // @GetMapping("{name}") public Mono<PlayerClass> getClass(@PathVariable String name){}
         fail();
     }
@@ -53,13 +53,13 @@ public class ClassControllerTests {
     }
 
     @Test
-    public void testCreateClass_OptimalInput() {
+    public void testCreatePlayerClass_OptimalInput() {
         // @PostMapping public void createClass(@RequestBody ClassDto classDto){}
         fail();
     }
 
     @Test
-    public void testCreateClass_MissingNonNullValues() {
+    public void testCreatePlayerClass_MissingNonNullValues() {
         // @PostMapping public void createClass(@RequestBody ClassDto classDto){}
         fail();
     }
